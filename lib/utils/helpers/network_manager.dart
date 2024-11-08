@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -7,7 +6,7 @@ import 'package:get/get.dart';
 
 import 'loaders.dart';
 
-/// Manages the network connectivity and provides methods to check and handle connectivity chances.
+/// Manages the network connectivity and provides methods to check and handle connectivity changes.
 class NetworkManager extends GetxController {
   static NetworkManager get instance => Get.find();
 
@@ -53,4 +52,3 @@ class NetworkManager extends GetxController {
     super.onClose();
   }
 }
-
