@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "131963267937",
+    "project_id": "commercestore334",
+    "storage_bucket": "commercestore334.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131963267937:android:a2aaeb5f26fc65a5a2b320",
+        "android_client_info": {
+          "package_name": "com.example.commerce_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131963267937-iaotgvougp4egmpf13bmqk9s1ibo04u9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgIkgl5txF35-GaEOx55bpTP_49tsNrIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131963267937-iaotgvougp4egmpf13bmqk9s1ibo04u9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "131963267937-c4v61i7flvp0j72nqfisl7lp4len44tr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.commerceStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
