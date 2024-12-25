@@ -21,10 +21,10 @@ android {
 
     defaultConfig {
         applicationId = "com.example.commerce_store"
-        minSdk = 23 // Replace with your desired minSdkVersion
-        targetSdk = 34 // Replace with your desired targetSdkVersion
-        versionCode = 1 // Replace with your app's versionCode
-        versionName = "1.0" // Replace with your app's versionName
+        minSdk = 23
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {

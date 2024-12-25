@@ -1,9 +1,6 @@
 import 'dart:async';
-
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import 'loaders.dart';
 
 /// Manages the network connectivity and provides methods to check and handle connectivity changes.
@@ -18,29 +15,28 @@ class NetworkManager extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    // Listen for connectivity changes
     _connectivitySubscription =
-        _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
+        _connectivity.onConnectivityChanged.listen((ConnectivityResult result) {
+          _updateConnectionStatus(result);
+        });
   }
 
   /// Update the connection status based on changes in connectivity and show a relevant popup for no internet connection.
   Future<void> _updateConnectionStatus(ConnectivityResult result) async {
     _connectionStatus.value = result;
-    if (_connectionStatus.value == ConnectivityResult.none) {
+    if (result == ConnectivityResult.none) {
       TLoaders.warningSnackBar(title: 'No Internet Connection');
     }
   }
 
-  /// Checking the internet connection status.
-  /// Return 'true' if connected 'false' otherwise.
+  /// Check the current internet connection status.
+  /// Returns `true` if connected, otherwise `false`.
   Future<bool> isConnected() async {
     try {
       final result = await _connectivity.checkConnectivity();
-      if (result == ConnectivityResult.none) {
-        return false;
-      } else {
-        return true;
-      }
-    } on PlatformException catch (_) {
+      return result != ConnectivityResult.none;
+    } catch (_) {
       return false;
     }
   }
